@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Parisienne-Regular';
-    src: url(Parisienne-Regular.ttf') format('ttf');
+    font-family: 'ebgaramond-regular';
+    src: url('https://vviinncceenntt.github.io/fonts/eb-garamond/ebgaramond-regular.ttf') format('ttf');
     font-display: block;
 }
 p {
-    font-family: 'Parisienne-Regular';
+    font-family: 'ebgaramond-regular';
 }
 footer {
     text-align: center;
