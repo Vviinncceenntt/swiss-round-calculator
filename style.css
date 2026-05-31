@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Noto Serif HK', 'NotoSerifHK', 'noto-serif-hk', 'notoserifhk-regular';
-    src: url('notoserifhk-regular.ttf') format('ttf');
+    font-family: 'Chiron Sung HK', 'ChironSungHK', 'chiron-sung-hk', 'chironsunghk-r';
+    src: url('chironsunghk-r.ttf') format('ttf');
     font-display: block;
 }
 p {
-    font-family: 'Noto Serif HK', 'NotoSerifHK', 'noto-serif-hk', 'notoserifhk-regular';
+    font-family: 'Chiron Sung HK', 'ChironSungHK', 'chiron-sung-hk', 'chironsunghk-r';
 }
 footer {
     text-align: center;
