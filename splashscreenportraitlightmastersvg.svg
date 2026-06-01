@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2732 2732" width="2732px" height="2732px">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Cubic 11';
+        src: url('https://raw.githubusercontent.com/Vviinncceenntt/fonts/main/cubic-11-1451/cubic-11.ttf') format('truetype');
+      }
+      @font-face {
+        font-family: 'Compact';
+        src: url('https://raw.githubusercontent.com/Vviinncceenntt/fonts/main/compact-regular/compact-regular.ttf') format('truetype');
+      }
+    </style>
+  </defs>
+  <rect width="2732" height="2732" fill="#FFFFFF"/>
+    <text x="1366" y="766" text-anchor="middle" dominant-baseline="central" font-family="'Cubic 11'" font-size="550" fill="#000000">士</text>
+    <text x="1366" y="1366" text-anchor="middle" dominant-baseline="central" font-family="'Cubic 11'" font-size="550" fill="#000000">啦</text>
+    <text x="1366" y="1966" text-anchor="middle" dominant-baseline="central" font-family="'Cubic 11'" font-size="550" fill="#000000">得</text>
+</svg>
