@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+    <link rel="stylesheet" href="style.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div>
+  <h3>Helper Variables (Functions of <em>p, r, d</em>)</h3>
+  <p>
+    Let \( P' = \lceil |p| \rceil \), \(\; R' = \max(3, \lceil r \rceil)\), \(\; D' = \max(2, \lceil |d| \rceil) \).
+  </p>
+  <p>
+    Let \( k = \begin{cases} 0 & \text{if } P' < 3 \\ \lceil \log_2(P' \cdot \frac{4}{3}) \rceil - 2 & \text{otherwise} \end{cases} \)
+    <br>
+    Let \( c = D' - 1 \)
+  </p>
+  <p>
+    Let \( N' = \max(4, \lceil n \rceil) \)
+  </p>
+  <p>
+    Let \( \text{BinomInv}(n, p_{prob}, \alpha) \) be the smallest integer \( x \) such that the Binomial CDF \( F_B(x; n, p_{prob}) \ge \alpha \).
+  </p>
+
+  <h3>Supported Player Range</h3>
+  <p>
+    \[ \max\left(4, \; P', \; \left\lfloor \frac{3}{4} \cdot 2^{R' - k - c - 1} \right\rfloor + 1 \right) \le n \le \max\left(4, \; P', \; \left\lfloor \frac{3}{4} \cdot 2^{R' - k} \right\rfloor \right) \]
+  </p>
+
+  <h3>Maximum Tolerable Losses</h3>
+  <p>
+    \[ L_{max} = \begin{cases} 
+    \text{BinomInv}\left(R', 0.5, \frac{P'}{N' \cdot \frac{4}{3}}\right) & \text{if } N' \cdot \frac{4}{3} \cdot F_B\left(\text{BinomInv}\left(R', 0.5, \frac{P'}{N' \cdot \frac{4}{3}}\right); R', 0.5\right) \le P' \\ 
+    \text{BinomInv}\left(R', 0.5, \frac{P'}{N' \cdot \frac{4}{3}}\right) - 1 & \text{otherwise}
+    \end{cases} \]
+  </p>
+</div>
+</body>
+</html>
