@@ -12,8 +12,12 @@
     Helper Variables (Functions of p, r, d)
   </h3>
   <p>
-    設 \( P' = \lceil |p| \rceil \)，\(\; R' = \max(3, \lceil r \rceil)\)，\(\; D' = \max(2, \lceil |d| \rceil) \)。<br />
-    Let \( P' = \lceil |p| \rceil \), \(\; R' = \max(3, \lceil r \rceil)\), \(\; D' = \max(2, \lceil |d| \rceil) \).
+    設 \( P' = \max(1, \lceil p \rceil) \)，\(\; N' = \max(4, \lceil n \rceil) \)，\(\; P^* = \min(N', P') \)。<br />
+    Let \( P' = \max(1, \lceil p \rceil) \), \(\; N' = \max(4, \lceil n \rceil) \), \(\; P^* = \min(N', P') \).
+  </p>
+  <p>
+    設 \( R' = \max(3, \lceil r \rceil) \)，\(\; D' = \max(2, \lceil d \rceil) \)。<br />
+    Let \( R' = \max(3, \lceil r \rceil) \), \(\; D' = \max(2, \lceil d \rceil) \).
   </p>
   <p>
     設 \( k = \begin{cases} 0 & \text{若 } P' < 3 \\ \lceil \log_2(P' \cdot \frac{4}{3}) \rceil - 2 & \text{否則} \end{cases} \)<br />
@@ -22,10 +26,6 @@
   <p>
     設 \( c = D' - 1 \)<br />
     Let \( c = D' - 1 \)
-  </p>
-  <p>
-    設 \( N' = \max(4, \lceil n \rceil) \)<br />
-    Let \( N' = \max(4, \lceil n \rceil) \)
   </p>
   <p>
     設 \( \text{BinomInv}(n, p_{prob}, \alpha) \) 為符合二項式累積分佈函數 \( F_B(x; n, p_{prob}) \ge \alpha \) 的最小整數 \( x \)。<br />
@@ -41,19 +41,19 @@
   </p>
 
   <h3>
-    最多負局數<br />
-    Maximum Losses
+    能容許的最多負局數<br />
+    Tolerable Maximum Losses
   </h3>
   <p>
     \[ L_{max} = \begin{cases} 
-    \text{BinomInv}\left(R', 0.5, \frac{P'}{N' \cdot \frac{4}{3}}\right) & \text{若 } N' \cdot \frac{4}{3} \cdot F_B\left(\text{BinomInv}\left(R', 0.5, \frac{P'}{N' \cdot \frac{4}{3}}\right); R', 0.5\right) \le P' \\ 
-    \text{BinomInv}\left(R', 0.5, \frac{P'}{N' \cdot \frac{4}{3}}\right) - 1 & \text{否則}
+    \text{BinomInv}\left(R', 0.5, \frac{P^*}{N' \cdot \frac{4}{3}}\right) & \text{若 } N' \cdot \frac{4}{3} \cdot F_B\left(\text{BinomInv}\left(R', 0.5, \frac{P^*}{N' \cdot \frac{4}{3}}\right); R', 0.5\right) \le P^* \\ 
+    \text{BinomInv}\left(R', 0.5, \frac{P^*}{N' \cdot \frac{4}{3}}\right) - 1 & \text{否則}
     \end{cases} \]
   </p>
   <p>
     \[ L_{max} = \begin{cases} 
-    \text{BinomInv}\left(R', 0.5, \frac{P'}{N' \cdot \frac{4}{3}}\right) & \text{if } N' \cdot \frac{4}{3} \cdot F_B\left(\text{BinomInv}\left(R', 0.5, \frac{P'}{N' \cdot \frac{4}{3}}\right); R', 0.5\right) \le P' \\ 
-    \text{BinomInv}\left(R', 0.5, \frac{P'}{N' \cdot \frac{4}{3}}\right) - 1 & \text{otherwise}
+    \text{BinomInv}\left(R', 0.5, \frac{P^*}{N' \cdot \frac{4}{3}}\right) & \text{if } N' \cdot \frac{4}{3} \cdot F_B\left(\text{BinomInv}\left(R', 0.5, \frac{P^*}{N' \cdot \frac{4}{3}}\right); R', 0.5\right) \le P^* \\ 
+    \text{BinomInv}\left(R', 0.5, \frac{P^*}{N' \cdot \frac{4}{3}}\right) - 1 & \text{otherwise}
     \end{cases} \]
   </p>
 </div>
